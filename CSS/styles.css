@@ -28,3 +28,45 @@ body{
 .navegacion-principal{
     background-color: var(--secundario);
 }
+
+.contenedor{
+    width: 120rem;
+    /* Una manera de poner los 4 márgenes en 4 propiedades 
+    margin-top: 0 ;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    */
+    /*margin: 0 auto 0 auto;  Tomando las pocisiones de  un relog*/
+    margin: 0 auto; /* El primer valor correspoonde a top-bottom 
+                    y el segundo valor corresponde a right-left */
+}
+
+.nav-bg{
+
+
+    background-color: var(--secundario);
+}
+
+/*
+.navegacion-principal a{
+    display: block;
+    background-color: var(--primario);
+}*/
+
+.navegacion-principal{
+    padding: 1rem;
+}
+
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none
+    ;
+}
+
+/*Display-block es vertical y display-inline es horizontal*/
+
+/*
+p {
+    background-color: var(--primario);
+}*/
