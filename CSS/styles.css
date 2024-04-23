@@ -59,7 +59,6 @@ body{
     display: flex;
     /*justify-content es para filas  
     align-items es lara columnas (flex-direction)*/
-    
     justify-content: space-between;
     font-size: 2rem;
     font-weight: bold;/*negritas*/
@@ -69,8 +68,7 @@ body{
 .navegacion-principal a{
     padding: 1rem;
     color: var(--blanco);
-    text-decoration: none
-    ;
+    text-decoration: none;
 }
 
 .navegacion-principal a:hover{
@@ -86,3 +84,24 @@ body{
 p {
     background-color: var(--primario);
 }*/
+/*Tamaños recomendados para media query
+ 480px para moviles
+ 768px para tablets
+ 1140px para laptops
+ 1400px para dispositivos más grandes como monitores o Tvs
+*/
+body{
+    background-color: beige;
+}
+@media (min-width: 480px){
+    body{
+        background-color: blue;
+    }
+}
+ 
+@media (min-width: 768px){
+    body{
+            background-color: cornflowerblue;
+        }
+
+}
