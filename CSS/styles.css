@@ -22,6 +22,8 @@ html{
 
 body{
     font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--gris) 0%,  var(--blanco) 100%);
 }
 /*Tipografia*/
 h1{
@@ -141,6 +143,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /*margin-bottom: 2rem;*/
 }
 .contenedor-hero p, .contenedor-hero h2{
     color: var(--blanco);
@@ -166,3 +169,32 @@ p {
     text-align: center; /*centrar el texto del boton*/
 
 }
+
+
+ 
+ @media (min-width: 768px){
+        .boton{
+            /*padding: 2rem;*/
+            width: auto;
+            /*margin: 2rem;*/
+        }
+  }
+
+  .sombra{
+    
+    margin-top: 2rem;
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    /*Motor para google chrome*/
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    /*Motor para mozilla firefox*/
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    /*que haremos el viernes,
+    acomodaremos la seccion mis servicios usando flexbox
+    que es blur: es desenfoque
+    que es box shadow: es para difuminar el dondo
+    que es box model: es la estructura para acomodar los contenedores
+    en que pagina generamos los box shadowws: Css generator*/
+  }
