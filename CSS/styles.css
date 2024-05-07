@@ -194,7 +194,50 @@ p {
     /*que haremos el viernes,
     acomodaremos la seccion mis servicios usando flexbox
     que es blur: es desenfoque
+    moz-box-shadow: es para el motor mozilla firefox
+    webkit-box-shadow: es para el motor chrome
     que es box shadow: es para difuminar el dondo
     que es box model: es la estructura para acomodar los contenedores
     en que pagina generamos los box shadowws: Css generator*/
   }
+  @media (min-width: 768px){
+   .servicios{
+    display: grid;
+   /*
+   alternativa sencilla
+   grid-templated-colummns: 1fr 1fr 1fr;
+   alternativa sencilla
+   grid-templated-colummns: 33.3% 33.3% 33.3%;
+   */
+   grid-template-columns: repeat(3, 1fr); /* El primer valor es para decir cuantas veces se repite y el segundo el tamaño*/
+   
+   }
+   .servicio h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   }
+
+   .servicio h3{
+       color: var(--secundario);
+       font-weight: normal;
+   }
+
+   .servicios p{
+    text-align: center;
+    /* Interlineado*/
+    line-height: 2;
+
+   }
+   .servicios .iconos{
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--primario);
+    border-radius: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+   }
+   }
