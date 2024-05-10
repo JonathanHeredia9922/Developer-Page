@@ -5,6 +5,8 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --grisclaro: #dfe9f3;
+    
 
 }
 
@@ -167,6 +169,7 @@ p {
     border-radius: .5rem; /*esquinas redondeadas*/
     width: 90%; /*ancho del boton*/
     text-align: center; /*centrar el texto del boton*/
+    border: none;/*Esto afecta únicamente al boton de la etiqueta "input"*/
 
 }
 
@@ -200,6 +203,11 @@ p {
     que es box model: es la estructura para acomodar los contenedores
     en que pagina generamos los box shadowws: Css generator*/
   }
+
+  .boton:hover{
+    cursor: pointer;
+  }
+
   @media (min-width: 768px){
    .servicios{
     display: grid;
@@ -210,8 +218,8 @@ p {
    grid-templated-colummns: 33.3% 33.3% 33.3%;
    */
    grid-template-columns: repeat(3, 1fr); /* El primer valor es para decir cuantas veces se repite y el segundo el tamaño*/
-   
    }
+   
    .servicio h3{
     display: flex;
     flex-direction: column;
@@ -233,6 +241,7 @@ p {
    .servicios .iconos{
     width: 15rem;
     height: 15rem;
+    margin: 0 auto;
     background-color: var(--primario);
     border-radius: 100%;
     display: flex;
@@ -241,3 +250,85 @@ p {
 
    }
    }
+   /* Contacto */
+.formulario{
+    background-color: var(--gris);
+    width: min(100rem, 100%);
+    /* Ahora el uso de media query. ¿Que es más pequeño, 60 rem o el 100% del tamaño de la pantalla?*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--primario);
+}
+
+@media (min-width: 768px){
+ .contenedor-campos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    grid-template-rows: auto auto 20rem;/* D arle el espacio de cada fila*/
+ }
+ /* nth-child significa el # del hijo. El orden seria, nombre, teléfono, correo y mensaje.
+ Como requerimos modificar correo y mensaje, usaremos 3 y 4 nth-child*/
+ .campo:nth-child(3),
+ .campo :nth-child(4){
+    /*Posiciona el elemento, */
+    grid-column: 1 / 3;
+ }
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block; /* Lograr que cada label tome todo el espacio disponible y este este separado del input*/
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campo textarea{
+    height: 20rem;/*Hacer más grande la altura de textarea */
+}
+
+.w-sm-100{
+    width: 100%;
+}
+
+@media (min-width: 768px){
+ .w-sm-100{
+    width: auto;
+ }
+ }
+
+ .flex{
+    display: flex;
+ }
+ 
+ .alinear-derecha{
+    justify-content: flex-end;
+ }
+
+ .footer{
+    text-align: center;
+ }
+
+
+ /*Scroll snap es para controlar el desplazamiento de un pagina web*/
